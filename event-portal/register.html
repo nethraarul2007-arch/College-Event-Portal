@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Register for college festival events.">
+  <title>Register | College Fest Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="register">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html"><span data-fest-name>Spectrum 2026</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="register.html" aria-current="page">Register</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+
+    <section class="page-hero"><div class="wrap"><h1>Event registration</h1><p>Fill in your details and choose one or more events.</p></div></section>
+
+    <section class="section">
+      <div class="wrap" style="max-width:760px">
+        <div id="register-success" class="notice notice--ok hidden" role="status"></div>
+        <form id="register-form" class="form" novalidate>
+          <div class="two">
+            <div class="field"><label for="name">Full name</label><input type="text" id="name" name="name" autocomplete="name"><p class="error" aria-live="polite"></p></div>
+            <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email"><p class="error" aria-live="polite"></p></div>
+          </div>
+          <div class="two">
+            <div class="field"><label for="phone">Mobile number</label><input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="10-digit number"><p class="error" aria-live="polite"></p></div>
+            <div class="field"><label for="college">College</label><input type="text" id="college" name="college" autocomplete="organization"><p class="error" aria-live="polite"></p></div>
+          </div>
+          <div class="field">
+            <label for="year">Year of study</label>
+            <select id="year" name="year">
+              <option value="">Choose year</option>
+              <option>1st year</option><option>2nd year</option><option>3rd year</option><option>4th year</option><option>Postgraduate</option>
+            </select>
+            <p class="error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <fieldset id="event-fieldset">
+              <legend>Events</legend>
+              <div id="event-choices" style="display:grid;gap:.5rem"></div>
+            </fieldset>
+            <p class="meta" id="fee-total" aria-live="polite"></p>
+            <p class="error" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label class="check"><input type="checkbox" name="terms" id="terms"><span>I have read the event rules and agree to follow them.</span></label>
+            <p class="error" aria-live="polite"></p>
+          </div>
+          <button class="btn" type="submit">Submit registration</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <h3 data-fest-name>Spectrum 2026</h3>
+        <p>Hosted by <span data-college>Your College Name</span>.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="events.html">Events and schedule</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a data-email href="#">email</a></li>
+          <li><a data-phone href="#">phone</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap"><p class="meta" style="color:#aaa4cf;margin-top:1.5rem">&copy; <span data-year></span> <span data-college>Your College Name</span>. All rights reserved.</p></div>
+  </footer>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

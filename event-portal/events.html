@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse all festival events, filter by category and view the day-wise schedule.">
+  <title>Events | College Fest Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="events">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="index.html"><span data-fest-name>Spectrum 2026</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="events.html" aria-current="page">Events</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="register.html">Register</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+
+    <section class="page-hero"><div class="wrap"><h1>Events</h1><p>Search, filter and register for the events you like.</p></div></section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="toolbar">
+          <div class="chips" id="category-chips" role="group" aria-label="Filter by category"></div>
+          <div>
+            <label class="sr-only" for="event-search">Search events</label>
+            <input type="text" id="event-search" placeholder="Search events" autocomplete="off">
+          </div>
+        </div>
+        <p class="meta" id="event-status" role="status" aria-live="polite"></p>
+        <div class="grid grid--3" id="event-grid" style="margin-top:1rem"></div>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="schedule">
+      <div class="wrap">
+        <h2>Schedule</h2>
+        <div class="tabs" id="schedule-tabs" role="tablist" aria-label="Festival days"></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th scope="col">Time</th><th scope="col">Event</th><th scope="col">Venue</th><th scope="col">Category</th></tr></thead>
+            <tbody id="schedule-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <h3 data-fest-name>Spectrum 2026</h3>
+        <p>Hosted by <span data-college>Your College Name</span>.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="events.html">Events and schedule</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <ul>
+          <li><a data-email href="#">email</a></li>
+          <li><a data-phone href="#">phone</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap"><p class="meta" style="color:#aaa4cf;margin-top:1.5rem">&copy; <span data-year></span> <span data-college>Your College Name</span>. All rights reserved.</p></div>
+  </footer>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
